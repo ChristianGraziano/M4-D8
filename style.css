@@ -7,3 +7,40 @@
 #icona-carrello {
     font-size: 1.5rem;
 }
+
+#card-container img {
+    height: 60%;
+    
+}
+
+.card {
+    width: 18rem !important;
+    
+}
+
+body {
+    background-color: rgb(212, 63, 63);
+}
+
+#button-modale {
+    background-color: brown !important;
+}
+
+#button-modale:hover {
+    background-color: rgb(146, 69, 69) !important;
+}
+.navbar {
+    background-color: beige !important;
+}
+
+#button-search {
+    background-color: brown !important; 
+    color: white !important;
+}
+#button-search:hover {
+    background-color: rgb(146, 69, 69) !important;
+}
+
+#logo-navbar {
+    width: 4rem;
+}
