@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4-D8</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        
+        <!-- NAVBAR -->
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+              <a class="navbar-brand fw-bold" href="#">Artigianal Shop</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <!-- BOTTONE DELLA MODALE -->
+                    <button type="button" class="btn btn-primary d-flex align-content-center gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <ion-icon id="icona-carrello" name="cart-outline"></ion-icon> My Cart
+                    </button>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input id="search-field" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button  class="btn btn-outline-success" type="button" id="button-search">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <!-- MODALE -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close style-button-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="" id="modal-body>
+
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- INIZIO DEL MAIN -->
+    <main class="container-fluid">
+        <!-- SEZIONE DOVE IMMETTERE GLI ELEMENTI DELL'API -->
+        <section class=" row d-flex justify-content-center gap-3 my-5" id="card-container">
+  
+        </section>
+  
+      </main>
+    
+    
+    
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="script.js"></script>   
+</body>
+</html>
