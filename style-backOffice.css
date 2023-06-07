@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#logo-navbar {
+    width: 4rem;
+}
+.navbar {
+    background-color: beige !important;
+}
+.home-hover:hover {
+    color: brown !important;
+    transform: scale(1.1) !important;
+}
+
+body {
+    background-color: rgb(212, 63, 63);
+}
