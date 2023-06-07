@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-
+ /* NAVBAR */
 #logo-navbar {
     width: 4rem;
 }
@@ -18,3 +18,34 @@
 body {
     background-color: rgb(212, 63, 63);
 }
+
+/* KEYFRAME PER ENTRATA TABELLA */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animazione-table {
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards; 
+}
+
+/* ANIMAZIONE PER L'ALERT DI ERRORE NELL'INSERIMENTO DEI PRODOTTI */
+
+.errore {
+    
+    animation: shake 0.5s linear;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
