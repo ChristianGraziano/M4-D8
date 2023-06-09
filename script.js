@@ -10,6 +10,8 @@ const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDdmNWFkZGI5YzBm
 let cardContainer = document.getElementById('card-container');
 let searchButtonNav = document.getElementById('button-search-navbar');
 let inputSearchNav = document.getElementById('search-field');
+
+
 // CHIAMATA DELL'API CHE FA VISUALIZZARE TUTTI I PRODOTTI A SCHERMO
 
 async function getProduct() {
@@ -33,7 +35,6 @@ async function getProduct() {
 
 // EVENT LISTENER PER LA RICERCA SUL BOTTONE DELLA NAVBAR
  searchButtonNav.addEventListener("click", makeSearch);
- 
 // FUNZIONE PER LA RICERCA 
  async function makeSearch() {
     let searchValue = inputSearchNav.value.toLowerCase();

@@ -20,7 +20,12 @@
 
 body {
     background-color: rgb(212, 63, 63);
+    width: 100%;
+    
+    
 }
+
+
 
 #button-modale {
     background-color: brown !important;
@@ -52,11 +57,16 @@ body {
     width: 4rem;
 }
 
+#logo-principale {
+    width: 20rem;
+}
 .style-link-backOffice:hover {
     color: brown !important;
     transform: scale(1.1) !important; 
 }
 
+
+/* ANIMAZIONE ENTRATA CARD */
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -71,6 +81,8 @@ body {
     animation: fade-in 1s ease-in-out forwards; 
 }
 
+/* ANIMAZIONE DELL'H3 SOTTO IL LOGO */
+
 @keyframes entry-left {
     0% {transform: translateX(-240%);}
     100% {transform: translateX(0);}
@@ -80,3 +92,4 @@ body {
     transform: translateX(-100%);
     animation: entry-left 3s ease-in-out 0s forwards;
 }
+

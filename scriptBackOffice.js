@@ -81,6 +81,7 @@ async function addNewPost() {
 
 function createPost(product) {
     let riga = document.createElement('tr');
+
     let nameProduct = document.createElement('td');
     nameProduct.innerText = product.name;
 
