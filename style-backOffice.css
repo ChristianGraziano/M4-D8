@@ -60,3 +60,9 @@ body {
     background-color: beige;
     border: transparent;
 }
+
+/* MEDIA QUERY PER RENDERE SCORREVOLE IN ORIZZONTALE LA TABELLA SU MOBILE */
+@media (max-width:480px)  { 
+    .table-responsive {max-width: 350px!important;}
+    
+};
