@@ -93,3 +93,11 @@ body {
     animation: entry-left 3s ease-in-out 0s forwards;
 }
 
+.card-dettagli-grande {
+    width: 30rem !important;
+}
+
+.home-hover:hover {
+    color: brown !important;
+    transform: scale(1.1) !important;
+}

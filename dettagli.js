@@ -28,7 +28,7 @@ async function showProduct() {
  function createTemplete(product) {
     let card = document.createElement('div');
     
-    card.classList.add("col-12","col-md-4", "col-lg-3","card", "p-0","mb-3", "flex-column" ,"justify-content-between", "shadow", "text-center", "style-card")
+    card.classList.add("card-dettagli-grande","card", "p-0", "mb-3", "flex-column" ,"justify-content-between", "shadow", "text-center", "style-card")
     let Img = document.createElement('img');
     Img.src = product.imageUrl;
     Img.classList.add();
