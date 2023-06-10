@@ -2,7 +2,7 @@ const endpointUrl = "https://striveschool-api.herokuapp.com/api/product/";
 
 
 // CHIAVE DI AUTORIZZAZZIONE DELL'API
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDdmNWFkZGI5YzBmNzAwMTQ0ODRmOTEiLCJpYXQiOjE2ODYxNzI4ODksImV4cCI6MTY4NzM4MjQ4OX0.Mg-JAyhjl55pvxtH4Fr_YPdMZn1L3g6Rg0u9d5zGRJo"
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDdmNWFkZGI5YzBmNzAwMTQ0ODRmOTEiLCJpYXQiOjE2ODYxNzI4ODksImV4cCI6MTY4NzM4MjQ4OX0.Mg-JAyhjl55pvxtH4Fr_YPdMZn1L3g6Rg0u9d5zGRJo";
 
 // ELEMENTI DEL DOM
 
@@ -14,6 +14,7 @@ const imgInput = document.getElementById("imgUrl");
 const priceInput = document.getElementById("inputPrice");
 const buttonForm = document.getElementById("addBtn");
 const errorAlert =  document.getElementById("empty-fields");
+const deleteDone = document.getElementById("delete-done");
 
 
 // CHIAMATA DELL'API CHE FA VISUALIZZARE TUTTI I PRODOTTI A SCHERMO
@@ -65,7 +66,7 @@ async function addNewPost() {
         brandInput.value = "";
         imgInput.value = "";
         priceInput.value = "";
-        
+        location.reload(); 
     }
     else {
         errorAlert.classList.remove("d-none");
@@ -81,6 +82,7 @@ async function addNewPost() {
 
 function createPost(product) {
     let riga = document.createElement('tr');
+    let idProduct = product._id;
 
     let nameProduct = document.createElement('td');
     nameProduct.innerText = product.name;
@@ -93,13 +95,16 @@ function createPost(product) {
 
     let imageProduct = document.createElement('td');
     imageProduct.src = product.imageUrl;
+    
 
     let priceProduct = document.createElement('td');
     priceProduct.innerText = product.price;
 
     let actionsButton = document.createElement('td');
 
-    const editBtn = document.createElement("button");
+    const editBtn = document.createElement("a");
+    editBtn.href = `modifica-prodotto.html?id=${product._id}`;
+    
     editBtn.classList.add("btn", "btn-sm", "mx-1", "btn-primary", "mb-1");
     const editImg = document.createElement("i");
     editImg.classList.add("fa-solid", "fa-pencil", "me-1");
@@ -115,9 +120,36 @@ function createPost(product) {
     const delTxt = document.createElement("span");
     delTxt.innerText = "Delete";
     delBtn.append(delImg, delTxt);
-    
+
+     delBtn.addEventListener("click", () => {
+        deleteProduct(idProduct);
+     });
+
     actionsButton.append(editBtn, delBtn)
     resultBox.appendChild(riga);
     riga.append (nameProduct, descProduct, brandProduct, imageProduct, priceProduct, actionsButton)
+    
+}
 
+
+// FUNZIONE PER ELIMINARE UN ARTICOLO
+
+async function deleteProduct(idProduct) {
+    try {
+        let idEnpoint = endpointUrl + idProduct;
+        const res = await fetch(idEnpoint, {
+            "method": "DELETE",
+            headers: 
+            { Authorization: "Bearer " + token}
+            
+        });
+        
+        deleteDone.classList.toggle("d-none");
+        setTimeout(() => {
+            deleteDone.classList.toggle("d-none");
+        }, 5000);
+        location.reload(); //Per ricaricare la pagina 
+    } catch (error) {
+        console.log(error);
+    }
 }

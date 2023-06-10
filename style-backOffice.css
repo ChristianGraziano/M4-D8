@@ -49,3 +49,9 @@ body {
     75% { transform: translateX(-5px); }
     100% { transform: translateX(0); }
   }
+
+  .form-section input{
+    border-radius: 5px;
+    text-align: center;
+
+  }

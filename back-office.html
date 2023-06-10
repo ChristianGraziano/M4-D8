@@ -30,25 +30,31 @@
       
           <!-- SEZIONE DEL FORM -->
           <section class="container my-5 ">
-            <div class="stile d-sm-flex justify-content-center gap-3 flex-wrap ">
+            <div class="stile d-sm-flex justify-content-center gap-3 flex-wrap form-section ">
                 <input class="mb-1" id="inputName" type="text" placeholder="Name">
                 <input class="mb-1" id="inputDesc" type="text" placeholder="Description">
                 <input class="mb-1" id="inputBrand" type="text"  placeholder="Brand">
                 <input class="mb-1" id="imgUrl" type="text"  placeholder="Image">
                 <input class="mb-1" id="inputPrice" type="number"  placeholder="Price">
-                <button id="addBtn" class="btn btn-primary d-block">Aggiungi</button>
+                <button id="addBtn" class="btn btn-primary d-block ">Aggiungi</button>
             </div>
-            <div class="alert alert-warning d-none errore" role="alert" id="empty-fields">
+            
+            <!-- ALERT DI DEL FORM X INSERIRE TUTTI I VALORI -->
+            <div class="alert alert-warning d-none errore my-2" role="alert" id="empty-fields">
               <i class="fa-solid fa-triangle-exclamation me-1"></i>
               <span>Valorizza tutti i campi richiesti!</span>
             </div>
             </section>
         
-      
+            <!-- ALERT DELLA CONFERMA DELLA CANCELLAZIONE DI UN ARTICOLO -->
+            <div class="alert alert-success d-none" role="alert" id="delete-done">
+              <i class="fa-solid fa-triangle-exclamation me-1"></i>
+              <span>Post con id <em id="my-id">xyz</em> eliminato con successo!</span>
+          </div>
       
         <section class="container">
         <table class="table animazione-table">
-          <thead>
+          <thead class="">
             <tr>
               <th scope="col-" class="table-primary">Name</th>
               <th scope="col-" class="table-info">Description</th>
@@ -59,7 +65,7 @@
 
             </tr>
           </thead>
-          <tbody id="result-box">
+          <tbody id="result-box" class="">
             
           </tbody>
         </table>
