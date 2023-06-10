@@ -12,7 +12,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <img src="asset/Artigianal Shop logo no scritta.png" alt="logo2" id="logo-navbar">  
+            <img src="asset/Artigianal Shop logo no scritta.png" alt="logo2" id="logo-navbar">
           <a class="navbar-brand" href="#">Area di Modifica</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,7 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active home-hover fw-bold fs-4 me-5" aria-current="page" href="back-office.html">Torna a Back Office</a>
+                <a class="nav-link active home-hover fw-bold fs-4 ms-5" aria-current="page" href="back-office.html">Torna a Back Office</a>
               </li>
             </ul>
           </div>
@@ -30,24 +30,42 @@
         <!-- SEZIONE DEL FORM -->
         <section class="container my-5 ">
             <div class="stile row ">
-                <input class="mb-1 col-4 " id="inputName" type="text" placeholder="Name">
-                <input class="mb-1 col-4 " id="inputDesc" type="text" placeholder="Description">
-                <input class="mb-1 col-4 " id="inputBrand" type="text"  placeholder="Brand">
-                <input class="mb-1 col-4 " id="imgUrl" type="text"  placeholder="Image">
-                <input class="mb-1 col-4 " id="inputPrice" type="number"  placeholder="Price">
-                <button id="addBtn" class="btn btn-primary d-block">Aggiungi</button>
+
+              <label class="fw-bold fs-4" for="name"> Modifica il Nome del Prodotto</label>
+              <input class="mb-3 col-12 d-block rounded py-2 style-input-modifica" id="inputName" type="text" placeholder="Name" name="name">
+
+              <label class="fw-bold fs-4" for="description">Modifica la Descrizione del Prodotto</label>
+              <input class="mb-1 col-12 d-block rounded py-2 style-input-modifica " id="inputDesc" type="text" placeholder="Description" name="description">
+
+              <label class="fw-bold fs-4" for="brand">Modifica il Brand del Prodotto</label>
+              <input class="mb-3 col-12 d-block rounded py-2 style-input-modifica " id="inputBrand" type="text"  placeholder="Brand" name="brand">
+
+              <label class="fw-bold fs-4" for="image">Modifica url dell'immagine</label>
+              <input class="mb-3 col-12 d-block rounded py-2 style-input-modifica " id="imgUrl" type="text"  placeholder="Image" name="image">
+
+              <label class="fw-bold fs-4" for="price">Modifica il Prezzo del Prodotto</label>
+              <input class="mb31 col-12 d-block rounded py-2 style-input-modifica " id="inputPrice" type="number"  placeholder="Price" name="price">
+
+              <button id="addBtn" class="btn btn-primary d-block col-4 m-auto my-5 p-2">Conferma Modifiche</button>
             </div>
-            <div class="alert alert-warning d-none errore" role="alert" id="empty-fields">
-              <i class="fa-solid fa-triangle-exclamation me-1"></i>
-              <span>Valorizza tutti i campi richiesti!</span>
-            </div>
-            </section>
-    
+          </section>
+          
+          <!-- ALERT DI ERRORE PER MANCANZA DI DATI -->
+          <div class="alert alert-warning d-none errore text-center mx-5" role="alert" id="empty-fields">
+            <i class="fa-solid fa-triangle-exclamation me-3"></i>
+            <span>Valorizza tutti i campi richiesti!</span>
+          </div>
+
+          <!-- ALERT DI CONFERMA DI MODIFICA DEL PRODOTTO -->
+          <div class="alert alert-primary d-none text-center mx-5" role="alert" id="edit-done">
+            <i class="fa-solid fa-check"></i>
+            <span>Post correttamente modificato!</span>
+        </div>
     </main>
 
-    
 
 
+    <script src="https://kit.fontawesome.com/e5a2b2fa25.js" crossorigin="anonymous"></script>
       <script src="script-Modifica.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>

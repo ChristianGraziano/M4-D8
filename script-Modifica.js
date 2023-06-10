@@ -17,6 +17,8 @@ const brandInput = document.getElementById("inputBrand");
 const imgInput = document.getElementById("imgUrl");
 const priceInput = document.getElementById("inputPrice");
 const buttonForm = document.getElementById("addBtn");
+const errorAlert = document.getElementById("empty-fields");
+const editDone = document.getElementById("edit-done");
 
 // Recupero il singolo post al caricamento della pagina:
 window.onload = showPost();
@@ -35,4 +37,43 @@ async function showPost() {
     brandInput.value = json.brand;
     imgInput.value = json.imageUrl;
     priceInput.value = json.price;
+}
+
+
+// ADD EVENT LISTENER CHE CONFERMA LA MODIFICA DEL PRODOTTO
+
+buttonForm.addEventListener("click", changeProduct);
+
+// FUNZIONE PER MODIFICARE L'API CON IL PUT
+
+async function changeProduct() {
+    if(nameInput.value && descInput.value && brandInput.value && imgInput.value && priceInput.value) {
+        
+        
+        const newPayload = {
+            "name": nameInput.value,
+            "description": descInput.value,
+            "brand": brandInput.value,
+            "imageUrl": imgInput.value,
+            "price": priceInput.value
+        };
+        const idEndpoint =  endpointUrl + activeId;
+        const createResult = await fetch(idEndpoint, {
+            method: "PUT",
+            body: JSON.stringify(newPayload),
+            headers: {
+                Authorization: "Bearer " + token,
+                "Content-Type": "application/json"
+            }
+        });
+        editDone.classList.toggle("d-none");
+            setTimeout(() => {
+                editDone.classList.toggle("d-none");
+            }, 5000);
+        } else {
+        errorAlert.classList.remove("d-none");
+        setTimeout(() => {
+            errorAlert.classList.add("d-none");
+        }, 2500);
+    }
 }

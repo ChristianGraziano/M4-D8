@@ -55,3 +55,8 @@ body {
     text-align: center;
 
   }
+
+.style-input-modifica {
+    background-color: beige;
+    border: transparent;
+}

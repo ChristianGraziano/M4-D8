@@ -59,6 +59,7 @@ async function getProduct() {
  
  function createTemplete(product) {
     let card = document.createElement('div');
+    let idProduct = product._id;
     card.classList.add("col-12","col-md-4", "col-lg-3","card", "p-0","mb-3", "flex-column" ,"justify-content-between", "shadow", "text-center", "style-card")
     let Img = document.createElement('img');
     Img.src = product.imageUrl;
@@ -77,8 +78,13 @@ async function getProduct() {
     ButtonCart.innerText =("Add To Cart");
     
     let ButtonDetail = document.createElement('a');
-    ButtonDetail.classList.add("btn", "btn-success", "mx-5", "my-2")
+    ButtonDetail.classList.add("btn", "btn-success", "mx-5", "my-2");
     ButtonDetail.innerText =("Details");
+    ButtonDetail.href = `dettagli.html?idDetail=${product._id}`;
+    ButtonDetail.target= "_blanck";
+    
+    ButtonDetail.addEventListener("click", console.log(product._id));
+    
 
     card.appendChild(Img);
     card.appendChild(Title);
