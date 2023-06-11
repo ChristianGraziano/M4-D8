@@ -15,11 +15,12 @@ const priceInput = document.getElementById("inputPrice");
 const buttonForm = document.getElementById("addBtn");
 const errorAlert =  document.getElementById("empty-fields");
 const deleteDone = document.getElementById("delete-done");
-
+const spinner = document.getElementById('spinner');
 
 // CHIAMATA DELL'API CHE FA VISUALIZZARE TUTTI I PRODOTTI A SCHERMO
 
 async function getProduct() {
+    spinner.classList.remove("d-none");
     try {
         const res = await fetch(endpointUrl, {
             headers: 
@@ -30,6 +31,7 @@ async function getProduct() {
             createPost(product)
          });
         myData = json
+        spinner.classList.add("d-none");
     } catch (error) {
         console.log(error);
     }

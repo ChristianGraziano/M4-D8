@@ -10,11 +10,12 @@ const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDdmNWFkZGI5YzBm
 let cardContainer = document.getElementById('card-container');
 let searchButtonNav = document.getElementById('button-search-navbar');
 let inputSearchNav = document.getElementById('search-field');
-
-
+const errorAlert = document.getElementById('empty-fields');
+const spinner = document.getElementById('spinner');
 // CHIAMATA DELL'API CHE FA VISUALIZZARE TUTTI I PRODOTTI A SCHERMO
 
 async function getProduct() {
+    spinner.classList.remove("d-none");
     try {
         const res = await fetch(endpointUrl, {
             headers: 
@@ -25,8 +26,10 @@ async function getProduct() {
             createTemplete(product)
          });
         myData = json
+        spinner.classList.add("d-none");
     } catch (error) {
         console.log(error);
+        spinner.classList.remove("d-none");
     }
 }
 
@@ -38,21 +41,29 @@ async function getProduct() {
 // FUNZIONE PER LA RICERCA 
  async function makeSearch() {
     let searchValue = inputSearchNav.value.toLowerCase();
-    cardContainer.innerHTML=""; 
-        let promise = await fetch(endpointUrl, {
-            headers: {Authorization: "Bearer " + token,}
-        });
-        let response = await promise.json();
-     
-     response.forEach((product) => {
-        let nameItem = product.name.toLowerCase();
-        if(nameItem.includes(searchValue)) {
-            createTemplete(product);
-            }
-        });
-    }
+    cardContainer.innerHTML="";
+    spinner.classList.remove("d-none"); 
+     try{
 
+         let promise = await fetch(endpointUrl, {
+                 headers: {Authorization: "Bearer " + token,}
+             });
+             let response = await promise.json();
+          
+          response.forEach((product) => {
+             let nameItem = product.name.toLowerCase();
+             if(nameItem.includes(searchValue)) {
+                 createTemplete(product);
+                 } 
+             });
+             spinner.classList.add("d-none");
+        } catch (error){
+            console.log(error);
+            spinner.classList.toggle("d-none");
+            
+        };
 
+ }
      
 
  // FUNZIONE PER CREARE I TEMPLATE DELLE CARD

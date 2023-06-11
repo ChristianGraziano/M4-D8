@@ -6,11 +6,14 @@ const endpointUrl = "https://striveschool-api.herokuapp.com/api/product/";
 // CHIAVE DI AUTORIZZAZZIONE DELL'API
 const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDdmNWFkZGI5YzBmNzAwMTQ0ODRmOTEiLCJpYXQiOjE2ODYxNzI4ODksImV4cCI6MTY4NzM4MjQ4OX0.Mg-JAyhjl55pvxtH4Fr_YPdMZn1L3g6Rg0u9d5zGRJo";
 
-let cardContainer = document.getElementById('card-container');
 
+// ELEMENTI DEL DOM
+let cardContainer = document.getElementById('card-container');
+const spinner = document.getElementById('spinner');
 
 // FUNZIONE PER FAR COMPARIRE IL PRODOTTO A SCHERMO CON LA CHIAMATA API
 async function showProduct() {
+    spinner.classList.remove("d-none");
     let idEnpoint = endpointUrl + activeId;
     const res = await fetch(idEnpoint,{
         headers: 
@@ -19,7 +22,7 @@ async function showProduct() {
     
     const json = await res.json();
     createTemplete(json);
-   
+    spinner.classList.add("d-none");
 }
 
  window.onload = showProduct();
