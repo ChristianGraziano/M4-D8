@@ -63,13 +63,16 @@ async function addNewPost() {
                 "Content-Type": "application/json"
             }
         });
+      
         nameInput.value = "";
         descInput.value = "";
         brandInput.value = "";
         imgInput.value = "";
         priceInput.value = "";
         location.reload(); 
+    
     }
+    
     else {
         errorAlert.classList.remove("d-none");
         setTimeout(() => {
