@@ -37,35 +37,36 @@
               <input class="mb-1 col-12 col-md-6 m-auto p-2 rounded" id="inputDesc" type="text" placeholder="Description">
               <input class="mb-1 col-12 col-md-6 m-auto p-2 rounded" id="inputBrand" type="text"  placeholder="Brand">
               <input class="mb-1 col-12 col-md-6 m-auto p-2 rounded" id="imgUrl" type="text"  placeholder="Image">
-                <input class="mb-1 col-12 col-md-6 m-auto p-2 rounded" id="inputPrice" type="number"  placeholder="Price">
-              </div>
-              <div class="d-flex justify-content-center">
-                <button id="addBtn" class="btn btn-primary m-auto text-center mt-2">Aggiungi</button>
-              </div>
-
-              
-              <!-- ALERT DI DEL FORM X INSERIRE TUTTI I VALORI -->
-              <div class="alert alert-warning d-none errore my-2" role="alert" id="empty-fields">
-                <i class="fa-solid fa-triangle-exclamation me-1"></i>
-                <span>Valorizza tutti i campi richiesti!</span>
-              </div>
-            </section>
-            
-            <!-- ALERT DELLA CONFERMA DELLA CANCELLAZIONE DI UN ARTICOLO -->
-            <div class="alert alert-success d-none" role="alert" id="delete-done">
-              <i class="fa-solid fa-triangle-exclamation me-1"></i>
-              <span>Post con id <em id="my-id">xyz</em> eliminato con successo!</span>
+              <input class="mb-1 col-12 col-md-6 m-auto p-2 rounded" id="inputPrice" type="number"  placeholder="Price">
+            </div>
+            <div class="d-flex justify-content-center">
+              <button id="addBtn" class="btn btn-primary m-auto text-center mt-2">Aggiungi</button>
             </div>
             
-      
-            <section class="container table-responsive">
-              <div class="row">
-                <div class="col-12">
-                  <table class="table animazione-table ">
-                    <thead>
-                      <tr>
-                        <th scope="col-" class="table-primary">Name</th>
-                        <th scope="col-" class="table-info">Description</th>
+            
+            <!-- ALERT DI DEL FORM X INSERIRE TUTTI I VALORI -->
+            <div class="alert alert-warning d-none errore my-2" role="alert" id="empty-fields">
+              <i class="fa-solid fa-triangle-exclamation me-1"></i>
+              <span>Valorizza tutti i campi richiesti!</span>
+            </div>
+          </section>
+          
+          <!-- ALERT DELLA CONFERMA DELLA CANCELLAZIONE DI UN ARTICOLO -->
+          <div class="alert alert-success d-none" role="alert" id="delete-done">
+            <i class="fa-solid fa-triangle-exclamation me-1"></i>
+            <span>Post con id <em id="my-id">xyz</em> eliminato con successo!</span>
+          </div>
+          
+          
+          
+          <section class="container table-responsive">
+            <div class="row">
+              <div class="col-12">
+                <table class="table animazione-table ">
+                  <thead>
+                    <tr>
+                      <th scope="col-" class="table-primary">Name</th>
+                      <th scope="col-" class="table-info">Description</th>
                         <th scope="col-" class="table-success">Brand</th>
                         <th scope="col-" class="table-warning">ImageUrl</th>
                         <th scope="col-" class="table-danger">Price</th>
@@ -86,6 +87,7 @@
           </div>
         </div>
       </section>
+
       
       
     </main>
@@ -93,9 +95,10 @@
 
 
     
-
-
+    <script src="https://kit.fontawesome.com/e5a2b2fa25.js" crossorigin="anonymous"></script>
+    
       <script src="scriptBackOffice.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
 </body>
 </html>
