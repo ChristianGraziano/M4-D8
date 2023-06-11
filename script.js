@@ -81,7 +81,7 @@ async function getProduct() {
     
     
     let Price = document.createElement('p');
-    Price.innerText = product.price + " " + "$";
+    Price.innerText = product.price + " " + "€";
     Price.classList.add("text-center", "fw-bold")
     
     let ButtonCart = document.createElement('button');

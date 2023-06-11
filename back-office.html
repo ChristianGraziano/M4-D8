@@ -29,15 +29,20 @@
       <main>
         
         <!-- SEZIONE DEL FORM -->
-        <section class="container my-5 ">
-            <div class="stile d-sm-flex justify-content-center gap-3 flex-wrap form-section ">
-              <input class="mb-1" id="inputName" type="text" placeholder="Name">
-              <input class="mb-1" id="inputDesc" type="text" placeholder="Description">
-              <input class="mb-1" id="inputBrand" type="text"  placeholder="Brand">
-              <input class="mb-1" id="imgUrl" type="text"  placeholder="Image">
-                <input class="mb-1" id="inputPrice" type="number"  placeholder="Price">
-                <button id="addBtn" class="btn btn-primary d-block ">Aggiungi</button>
+        <section class="container my-5">
+            
+            <h4 class="text-center mb-4">Aggiungi Nuovo Prodotto</h4>
+            <div class="row ">
+              <input class="mb-1 col-12 col-md-6 m-auto p-2 rounded" id="inputName" type="text" placeholder="Name">
+              <input class="mb-1 col-12 col-md-6 m-auto p-2 rounded" id="inputDesc" type="text" placeholder="Description">
+              <input class="mb-1 col-12 col-md-6 m-auto p-2 rounded" id="inputBrand" type="text"  placeholder="Brand">
+              <input class="mb-1 col-12 col-md-6 m-auto p-2 rounded" id="imgUrl" type="text"  placeholder="Image">
+                <input class="mb-1 col-12 col-md-6 m-auto p-2 rounded" id="inputPrice" type="number"  placeholder="Price">
               </div>
+              <div class="d-flex justify-content-center">
+                <button id="addBtn" class="btn btn-primary m-auto text-center mt-2">Aggiungi</button>
+              </div>
+
               
               <!-- ALERT DI DEL FORM X INSERIRE TUTTI I VALORI -->
               <div class="alert alert-warning d-none errore my-2" role="alert" id="empty-fields">
