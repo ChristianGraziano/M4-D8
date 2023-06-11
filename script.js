@@ -92,7 +92,7 @@ async function getProduct() {
     ButtonDetail.classList.add("btn", "btn-success", "mx-5", "my-2");
     ButtonDetail.innerText =("Details");
     ButtonDetail.href = `dettagli.html?idDetail=${product._id}`;
-    ButtonDetail.target= "_blanck";
+    
     
     ButtonDetail.addEventListener("click", console.log(product._id));
     
