@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
  /* NAVBAR */
 #logo-navbar {
     width: 4rem;
@@ -17,6 +20,7 @@
 
 body {
     background-color: rgb(212, 63, 63);
+    font-family: 'Lato', sans-serif;
 }
 
 /* KEYFRAME PER ENTRATA TABELLA */
@@ -66,3 +70,4 @@ body {
     .table-responsive {max-width: 350px!important;}
     
 };
+
