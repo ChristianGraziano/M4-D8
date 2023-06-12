@@ -17,7 +17,9 @@
     width: 18rem !important;
     
 }
-
+ .card:hover {
+    transform: translateY(-0.8rem)
+ }
 body {
     background-color: rgb(212, 63, 63);
     width: 100%;

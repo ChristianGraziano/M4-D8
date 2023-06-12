@@ -85,11 +85,11 @@ async function getProduct() {
     Price.classList.add("text-center", "fw-bold")
     
     let ButtonCart = document.createElement('button');
-    ButtonCart.classList.add("btn", "btn-info", "mx-3", "button-cart");
+    ButtonCart.classList.add("btn", "btn-info", "mx-3", "button-cart", "shadow");
     ButtonCart.innerText =("Add To Cart");
     
     let ButtonDetail = document.createElement('a');
-    ButtonDetail.classList.add("btn", "btn-success", "mx-5", "my-2");
+    ButtonDetail.classList.add("btn", "btn-success", "mx-5", "my-2","shadow");
     ButtonDetail.innerText =("Details");
     ButtonDetail.href = `dettagli.html?idDetail=${product._id}`;
     

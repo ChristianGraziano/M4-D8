@@ -43,10 +43,12 @@ async function showProduct() {
     brand.innerText =product.brand;
 
     let description = document.createElement('p');
+    description.classList.add("p-2");
     description.innerText= product.description;
     
     
     let Price = document.createElement('p');
+    Price.classList.add("fs-4")
     Price.innerText = product.price + " " + "$";
     Price.classList.add("text-center", "fw-bold")
     
