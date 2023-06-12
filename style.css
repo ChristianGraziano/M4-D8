@@ -101,3 +101,22 @@ body {
     color: brown !important;
     transform: scale(1.1) !important;
 }
+#logo-footer {
+    width: 8rem;
+}
+
+.div-icone-footer ion-icon {
+    font-size: 2rem;
+}
+
+.div-icone-footer ion-icon:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: beige;  
+}
+#last-div {
+    background-color: lightgray;
+}
